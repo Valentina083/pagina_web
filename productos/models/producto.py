@@ -9,3 +9,6 @@ class Producto(models.Model):
     descripcion = models.TextField()
     # foto_producto = models.CharField(max_length=45)
     proveedor = models.ForeignKey('proveedores.Proveedor', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.nombre
