@@ -1,10 +1,10 @@
-from rest_framework import viewsets
+from rest_framework.viewsets import ModelViewSet
 # modelo creado
 from proveedores.models import Proveedor
 # serializer creado
 from proveedores.serializers import ProveedorSerializer
 
 
-class ProveedorViewSet(viewsets.ModelViewSet):
+class ProveedorViewSet(ModelViewSet):
     queryset = Proveedor.objects.all()
     serializer_class = ProveedorSerializer
